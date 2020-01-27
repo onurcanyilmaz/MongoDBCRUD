@@ -11,7 +11,8 @@ namespace MongoDBActions
     public class Person
     {
         [BsonId]
-        public ObjectId _id { get { return ObjectId.GenerateNewId(); } private set { } }        public Guid id { get; set; }
+        public ObjectId _id { get { return ObjectId.GenerateNewId(); } private set { } }
+        public Guid id { get; set; }
         public string name { get; set; }
         public string surname { get; set; }
         public int age { get; set; }
@@ -19,7 +20,6 @@ namespace MongoDBActions
         public string ert { get; set; }
         public string onr { get; set; }
         public int asd { get; set; }
-
         public List<Content> Content { get; set; }
     }
 }
